@@ -1,0 +1,38 @@
+### Problem Description
+
+There is a thief who tries to scrap atm pins of people by guessing that their pin must be the traversal of their intial on his special lucky keypad (numbered 0-9) which he changes on every other try. 
+
+You are given a `3x3` array `keypad` and a list of names `names`.
+
+You need to return a list of `probable pins` of each person. 
+
+To understand the traversal of letters in the matrix, refer to the testcases.
+
+### Example
+
+**keypad** = [[6,2,1], [8,3,5], [9,7,6]]
+
+**names** = ["Max", "Dave", "John Deer"]
+
+**output :** [986331156, 98639, 6212379]
+
+**explanation :**
+- For "Max", the traversal of "M" is 9-8-6 (down -> up), 6-3 (diagonal), 3-1 (diagonal) and 1-5-6 (up -> down)
+
+- For "Dave", the traversal of "D" is 9-8-6 (down -> up), 6-3 (diagonal) and 3-9 (diagonal)
+
+- For "John Deer", the traversal of "J" is 6-2-1 (left -> right), 2-3-7 (up -> down) and 7-9 (right -> left)
+
+    def name_password(keypad: list[int][int], names: list[str]) -> list[int]
+        pass
+    
+    assert name_password([[6,2,1], [8,3,5], [9,7,6]], ["Max", "Dave", "John Deer"]) == [986331156, 98639, 6212379]
+
+    assert name_password([[1,2,3], [4,5,6], [7,8,9]], ["Nazy", "Leo", "Omanda"]) == [741159963, 147789, 123369987741]
+
+    assert name_password([[3,5,2], [1,0,9], [0,4,1]], ["Jess", "Tom", "Xin", "Zendeya"]) == [35250440, 352504, 301200, 352200041]
+
+    assert name_password([[4,2,1], [0,0,0], [1,1,7]], ["Elvis", "Yin"]) == [401421000117, 400101]
+
+
+
